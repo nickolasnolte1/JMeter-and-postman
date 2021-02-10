@@ -57,7 +57,7 @@ def algobusquedabi(element, array, inicio, fin):
 
         
 
-#PATH
+#PATH. 
 
 @app.route('/', methods=['GET'])
 def home():
