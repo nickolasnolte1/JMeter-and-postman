@@ -55,4 +55,30 @@ def algobusquedabi(element, array, inicio, fin):
     else: 
         return algobusquedabi(element, array, mitad+1, fin)
 
+        
 
+#PATH
+
+@app.route('/', methods=['GET'])
+def home():
+    return 'HOME'
+
+
+@app.route('/busquedalineal', methods=['GET'])
+def lineal(): 
+  X = int(request.args.get('X'))
+  value = int(request.args('Value'))
+  return str(busquedalineal(value,X))
+
+
+  @app.route('/busquedabinaria', methods=['GET'])
+def binario(): 
+  X = int(request.args.get('X'))
+  value = int(request.args('Value'))
+  return str(busquedabinaria(value,X))
+
+#RUN
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run(host = '0.0.0.0', port=5000)
